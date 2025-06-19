@@ -185,7 +185,7 @@ jobs:
           path: sarif-input
 
       - name: List downloaded SARIFs
-        if: true # Just used for debugging
+        if: false # Just used for debugging
         run: |
           pwd
           find sarif-input -type f
