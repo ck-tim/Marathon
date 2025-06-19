@@ -4,6 +4,7 @@ on:
   #push: # not on push for the training (just manual)
   workflow_dispatch: # to allow running manually
 
+# wichtig! check das mal
 permissions:
   contents: read
 
@@ -19,6 +20,7 @@ jobs:
       - name: Checkout Sources
         uses: actions/checkout@v4
         with:
+          # auch wichtig, auch checken
           persist-credentials: false
 
       - name: Set up JDK
