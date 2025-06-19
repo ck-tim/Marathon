@@ -47,6 +47,7 @@ jobs:
           rm ZAP_2.15.0_Crossplatform.zip && \
           mv ZAP_2.15.0 ZAP && \
           cd ZAP
+        # es fehlt: checksum!
 
       - name: Start OWASP ZAP in Background
         run: cd ZAP && pwd && nohup ./zap.sh -daemon -port 7777 -host 127.0.0.1 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config api.incerrordetails=true &
