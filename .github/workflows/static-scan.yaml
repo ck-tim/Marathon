@@ -48,6 +48,7 @@ jobs:
         run: mvn org.cyclonedx:cyclonedx-maven-plugin:2.7.9:makeAggregateBom # outputs to target/bom.json and/or bom.xml
 
       # attaches artifact to output of build
+      # Sonatype SBOM Manager! http://help.sonatype.com/en/sonatype-sbom-manager.html
       - name: Upload SBOM as Artifact
         uses: actions/upload-artifact@v4
         with:
